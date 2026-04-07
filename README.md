@@ -17,7 +17,7 @@ I moved away from the default 'Users' container to a dedicated **'Departments' O
 ## 🔐 Group Policy Management (GPOs)
 Implemented the following policies to harden the environment and improve user experience:
 1. **Automated Drive Mapping:** Uses GPO Preferences to map the `c:` Drive to departmental file shares.
-![Group Policy One](screenshots/GPO!.PNG)
+![Group Policy One](screenshots/GPO1.PNG)
 2. **Restricted Local Admins:** Removed 'Domain Users' from local administrator groups on workstations to enforce the **Principle of Least Privilege**.
 ![Grouop Policy Two](screenshots/GPO2.PNG)
 
