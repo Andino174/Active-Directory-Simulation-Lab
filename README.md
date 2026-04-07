@@ -16,8 +16,12 @@ I moved away from the default 'Users' container to a dedicated **'Departments' O
 
 ## 🔐 Group Policy Management (GPOs)
 Implemented the following policies to harden the environment and improve user experience:
-1. **Automated Drive Mapping:** Uses GPO Preferences to map the `S:` Drive to departmental file shares.
+1. **Automated Drive Mapping:** Uses GPO Preferences to map the `c:` Drive to departmental file shares.
+[User Creation and Ous](screenshots/GPO!.PNG)
 2. **Restricted Local Admins:** Removed 'Domain Users' from local administrator groups on workstations to enforce the **Principle of Least Privilege**.
+[User Creation and Ous](screenshots/GPO2.PNG)
+
+
 
 ## 🛠️ Critical Troubleshooting: DNS & Domain Connectivity
 
@@ -34,5 +38,7 @@ During the workstation provisioning phase, a Windows 11 client failed to join th
 * **Manual Configuration:** I assigned a **Static IP** to the Windows Client and manually set the **Preferred DNS Server** to the IP address of the Domain Controller.
 * **DNS Cache Clear:** Ran `ipconfig /flushdns` to clear any stale records.
 * **Verification:** Successfully joined the domain on the next attempt and verified the computer object appeared in the `Computers` container in Active Directory.
+[User Creation and Ous](screenshots/UserConnection.PNG)
+
 
 **Key Learning:** Active Directory is entirely dependent on DNS. A client must "ask" the Domain Controller where the domain is; if it asks the internet (8.8.8.8) or a home router, it will never find a local `.local` lab.
