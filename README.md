@@ -9,6 +9,8 @@ This project documents the deployment and configuration of a fully functional Wi
 
 ## 📂 Directory Architecture (OU Design)
 I moved away from the default 'Users' container to a dedicated **'Departments' OU** structure. This allows for granular GPO targeting and matches real-world enterprise standards.
+![User Creation and Ous](screenshots/UserCreation.PNG)
+
 
 * **Logic:** Users are sorted into sub-OUs (IT, Finance, Marketing) to ensure departmental policies (like network drives) are applied only to the intended recipients.
 
